@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #297DD7;
+  --primary-text-color: #ffffff;
+  --primary-hover-color: #0f4988ff;
+  --primary-shadow-color: #2368b3ff;
+
+  --secondary-color: #6c757d;
+  --secondary-text-color: #ffffff;
+}
