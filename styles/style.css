@@ -20,6 +20,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Nunito Sans, sans-serif;
   background: #ecf5fc;
@@ -358,6 +363,60 @@ nav a:hover::after {
   .filter-btns button {
     min-width: 140px;
     text-align: center;
+  }
+}
+
+/* === Education Section === */
+.education {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.education h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.education .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education .edu-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.education .edu-item:hover {
+  transform: translateY(-5px);
+}
+
+.education .edu-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.education .edu-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.education .edu-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive: mobile jadi 1 kolom */
+@media (max-width: 768px) {
+  .education .container {
+    grid-template-columns: 1fr;
   }
 }
 
