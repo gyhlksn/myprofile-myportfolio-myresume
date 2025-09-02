@@ -1,9 +1,16 @@
 // Filter portfolio
 const filterBtns = document.querySelectorAll('.filter-btns button');
+const filterContainer = document.querySelector('.filter-btns');
 const items = document.querySelectorAll('.portfolio-grid .item');
 
+// Filter portfolio
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
+    // aktifkan button yang dipilih
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // ambil kategori
     const category = btn.getAttribute('data-filter');
     items.forEach(item => {
       if (category === 'all' || item.dataset.category === category) {
@@ -14,6 +21,20 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
+// Default aktif di "All"
+filterBtns[0].classList.add('active');
+
+// Mobile: toggle filter menu
+if (window.innerWidth <= 768) {
+  filterContainer.classList.add('collapsed');
+  filterBtns[0].addEventListener('click', (e) => {
+    // kalau klik tombol pertama, toggle collapse
+    e.stopPropagation();
+    filterContainer.classList.toggle('collapsed');
+  });
+}
+
 
 // burger menu toggle
 const burger = document.querySelector('.burger');
