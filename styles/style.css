@@ -436,6 +436,7 @@ nav a:hover::after {
 .experience .container {
   background: #fff;
   border-radius: 10px;
+  border: #33333322 solid 0.5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 2rem;
   margin-bottom: 2rem;
@@ -455,14 +456,14 @@ nav a:hover::after {
 /* Item utama: logo + deskripsi */
 .xp-item {
   display: grid;
-  grid-template-columns: 470px 1fr;
+  grid-template-columns: 500px 1fr;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .xp-item img {
-  width: 450px;
+  width: 480px;
   height: auto;
   object-fit: contain;
 }
@@ -507,22 +508,28 @@ nav a:hover::after {
   }
 }
 
-
-/* CTA */
-.cta {
+/* === Resume Button === */
+.cta-resume {
   text-align: center;
+  padding: 3rem 1rem;
 }
-.btn {
+
+.cta-resume button {
   background: var(--primary-color);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 1rem;
+  border: none;
+  padding: 1.2rem 4rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-.btn:hover {
-  background: #005fa3;
+
+.cta-resume button:hover {
+  background: var(--primary-hover-color);
+  transform: scale(1.03);
 }
+
 
 footer {
   text-align: center;
@@ -530,6 +537,56 @@ footer {
   color: white;
   padding: 1rem;
   margin-top: 1rem;
+}
+
+/* === Footer Section === */
+.footer {
+  background: #222;
+  color: #eee;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-info li a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.contact-info li a i {
+  margin-right: 8px;
+  color: var(--secondary-text-color);
+}
+
+.contact-info li a:hover {
+  color: #4da6ff;
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  color: #777;
 }
 
 @keyframes fadeInUp {
