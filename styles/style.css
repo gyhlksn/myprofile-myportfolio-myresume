@@ -295,6 +295,17 @@ nav a:hover::after {
   }
 }
 
+@media (max-width: 768px) {
+  .slide-track img{
+    width: 60px;
+    height: 60px;
+    margin: 0 0.8rem;
+  }
+  .slide-track img.long-logo {
+  width: 95px;
+  }
+}
+
 /* === Portfolio Section === */
 .portfolio {
   text-align: center;
