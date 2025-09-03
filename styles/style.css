@@ -22,8 +22,6 @@
 }
 
 html {
-  max-width: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -38,6 +36,14 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.skills-slider-top,
+.skills-slider-bottom,
+.portfolio,
+.experience,
+.education {
+  overflow-x: hidden;
 }
 
 section:not(.skills, .about) {
