@@ -22,6 +22,8 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -504,6 +506,7 @@ nav a:hover::after {
   }
 
   .xp-item img {
+    width: 270px;
     margin: 0 auto;
   }
 }
