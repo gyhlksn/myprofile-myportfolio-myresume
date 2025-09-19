@@ -1,55 +1,52 @@
 // Filter portfolio
-const filterBtns = document.querySelectorAll('.filter-btns button');
-const filterContainer = document.querySelector('.filter-btns');
-const items = document.querySelectorAll('.portfolio-grid .item');
+const filterBtns = document.querySelectorAll(".filter-btns button");
+const filterContainer = document.querySelector(".filter-btns");
+const items = document.querySelectorAll(".portfolio-grid .item");
 
 // Filter portfolio
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
     // aktifkan button yang dipilih
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
 
     // ambil kategori
-    const category = btn.getAttribute('data-filter');
-    items.forEach(item => {
-      if (category === 'all' || item.dataset.category === category) {
-        item.style.display = 'block';
+    const category = btn.getAttribute("data-filter");
+    items.forEach((item) => {
+      if (category === "all" || item.dataset.category === category) {
+        item.style.display = "block";
       } else {
-        item.style.display = 'none';
+        item.style.display = "none";
       }
     });
   });
 });
 
 // Default aktif di "All"
-filterBtns[0].classList.add('active');
+filterBtns[0].classList.add("active");
 
 // Mobile: toggle filter menu
 if (window.innerWidth <= 768) {
-  filterContainer.classList.add('collapsed');
-  filterBtns[0].addEventListener('click', (e) => {
+  filterBtns[0].addEventListener("click", (e) => {
     // kalau klik tombol pertama, toggle collapse
     e.stopPropagation();
-    filterContainer.classList.toggle('collapsed');
   });
 }
 
-
 // burger menu toggle
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav');
-const navLinks = document.querySelectorAll('nav a');
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll("nav a");
 
 // Toggle menu saat burger di klik
-burger.addEventListener('click', () => {
-  nav.classList.toggle('show');
+burger.addEventListener("click", () => {
+  nav.classList.toggle("show");
 });
 
 // Tutup menu saat link di klik
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('show');
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
   });
 });
 
@@ -60,7 +57,7 @@ const roles = [
   "Web Developer ",
   "Administrator ",
   "Videografer ",
-  "Sosial Media Spesialis "
+  "Sosial Media Spesialis ",
 ];
 
 let roleIndex = 0;
